@@ -2,11 +2,11 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/Navbar';
 import Textform from './components/Textform';
-import About from './components/About';
+// import About from './components/About';
 import React, {useState} from 'react';
 
-import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
-import { link } from 'react-router-dom';
+// import {BrowserRouter as Router, Switch, Route, Link} from "react-router-dom"
+// import { link } from 'react-router-dom';
 
 function App() {
 const [mode, setMode] =useState('light');
@@ -35,19 +35,19 @@ setmodeText("Enable Dark Mode")
 
   return (
     <>
-    <Router>
+    {/* <Router> */}
     <Navbar title="Textutils" mode={mode} toggleMode={toggleMode} textMode={modeText}/>
     <div className="container my-3">
-  <Switch> 
-    <Route path="/about">
-      <About/>
-      </Route>
-      <Route path="/">
+  {/* <Switch>  */}
+    {/* <Route path="/about"> */}
+      {/* <About/> */}
+      {/* </Route> */}
+      {/* <Route path="/"> */}
     <Textform heading="Enter the text to analyze"/>
-    </Route>
-    </Switch>
+    {/* </Route> */}
+    {/* </Switch> */}
     </div>
-    </Router>
+    {/* </Router> */}
   </>);
 }
 
